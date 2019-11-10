@@ -1,0 +1,30 @@
+body{
+    background-color: teal;
+    
+}
+
+#burgerTime{
+    background-image: url("https://image.flaticon.com/icons/svg/1046/1046784.svg");
+    background-repeat:no-repeat;
+    /* background-color: teal; */
+    height: 700px;
+   widows: 900px;
+   margin-left: 300px;
+   /* opacity: 0.4; */
+
+}
+#colorfulName{
+    /* background-image: url("https://image.flaticon.com/icons/svg/1046/1046784.svg"); */
+    /* background-repeat:no-repeat; */
+    background-color: black;
+    color: #ccc;
+    opacity: 0.8;
+    /* color: white; */
+}
+
+#burgers-available{
+  color: red;
+  border: tomato;
+}
+
+

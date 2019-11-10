@@ -19,13 +19,11 @@ function printQuestionMarks(num) {
       // check to skip hidden properties
       if (Object.hasOwnProperty.call(ob, key)) {
         let value = ob[key];
-        // if string with spaces,
-        // add quotations (Lana Del Grey => 'Lana Del Grey')
+        
         if (typeof value === 'string' && value.indexOf(' ') >= 0) {
           value = `'${value}'`;
         }
-        // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-        // e.g. {sleepy: true} => ["sleepy=true"]
+      
         arr.push(key + '=' + value);
       }
     }
@@ -65,8 +63,7 @@ function printQuestionMarks(num) {
         cb(result);
       });
     },
-    // An example of objColVals would be {name: panther, sleepy: true}
-    updateOne(): function(table, objColVals, condition, cb) {
+    updateOne: function(table, objColVals, condition, cb) {
       let queryString = 'UPDATE ' + table;
   
       queryString += ' SET ';
@@ -84,22 +81,9 @@ function printQuestionMarks(num) {
       });
     },
   
-    // delete: function(table, condition, cb) {
-    //   let queryString = 'DELETE FROM ' + table;
-    //   queryString += ' WHERE ';
-    //   queryString += condition;
-  
-    //   console.log(queryString);
-    //   connection.query(queryString, function(err, result) {
-    //     if (err) {
-    //       throw err;
-    //     }
-  
-    //     cb(result);
-    //   });
-    // },
+
   };
   
-  // Export the orm object for the model (cat.js).
+  // Export the orm object for the model (burger.js).
   module.exports = orm;
   

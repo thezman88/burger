@@ -1,6 +1,6 @@
 const mysql = require('mysql');
 
-const connection = mysql.createConnection(require('./orm'));
+const connection = mysql.createConnection(require('./db-config'));
 
 // Make connection.
 connection.connect(function(err) {
