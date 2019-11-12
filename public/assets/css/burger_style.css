@@ -27,4 +27,8 @@ body{
   border: tomato;
 }
 
+#burgerName{
+    width: 350px;
+}
+
 

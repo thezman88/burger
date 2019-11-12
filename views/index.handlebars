@@ -1,132 +1,45 @@
-
-
-
 <div class="container-fluid">
   <div id="burgerTime">
-  <h1 class="display-1 text-dark">Eat Da Burger!</h1>
+    <h1 class="display-1 text-dark">Eat Da Burger!</h1>
 
 
 
 
-  <input id="burgerName" type="text" name="burger_name" placeholder="Create a burger">
-  <button id="submit-btn" type="button" onclick="handleSubmit()">create burger</button>
+    {{!-- <input id="burgerName" type="text" name="burger_name" placeholder="Create a burger"> --}}
+
+  <input type="text" class="form-control" id="burgerName" aria-describedby="basic-addon3">
+    <button id="submit-btn" type="button" onclick="handleSubmit()">create burger</button>
 
 
-  <div class="row mt-3 mr-5 ">
-    <div class="col-6 border" id="colorfulName">
-      <h2>Yummy Burgers!</h2>
-      {{#each burger}}
+    <div class="row mt-3 mr-5 ">
+      <div class="col-6 border" id="colorfulName">
+        <h2>Yummy Burgers!</h2>
+        {{#each burger}}
 
-      {{#unless this.devoured}}<br>
-      <button type="button" class="btn-danger  eat-btn border" onclick="handleDevoure({{id}})">Devoure</button>
+        {{#unless this.devoured}}<br>
+        <button type="button" class="btn-danger  eat-btn border" onclick="handleDevoure({{id}})">Devoure</button>
 
-      {{burger_name}}
-         {{/unless}}
-    {{/each}}
-  </div>
-  <div class="col-6 border "id="colorfulName">
-    <h2>Burgers Enjoyed</h2>
-   
- 
-    {{#each burger}}
-    {{#if this.devoured}}<br>
-
-    {{burger_name}} <span>#{{id}}</span>
-    {{/if}}
-    {{/each}}
-  </div>
-
-</div>
-</div>
-</div>
-</div>
-
-
-
-{{!-- <div class="container-fluid">
-  <div class="row">
-    <div class="col-4 ">
-      {{#each burger}}
-
-      {{#unless this.devoured}}
-
-    </div>
-        </div>
-<div class="row">
-    <div class="col-4">
-      <div class="border">
-      <button type="button" class="eat-btn border" onclick="handleDevoure({{id}})">Devoure</button>
-
-            {{burger_name}}</div>
-    </div>
-    </div>
-    <div class="col-4">
-       {{/unless}}
-      {{/each}}
-{{#each burger}}
-    {{#if this.devoured}}
-
-    <div class="burger">{{burger_name}} <span>#{{id}}</span></div>
-        {{/if}}
+        {{burger_name}}
+        {{/unless}}
         {{/each}}
-    </div>
-    
-  </div>
-</div> --}}
-
-
-
-{{!-- <section id="burgers-container">
-  <div id="burgers-available">
-    <h2>Burgers Available</h2>
-    <div class="container-fluid">
-
-
-
-
-      {{#each burger}}
-
-
-
-
-      {{#unless this.devoured}}
-      <div class="row">
-        <div class="col-4">
-          <div class="burger border">
-
-            <button type="button" class="eat-btn border" onclick="handleDevoure({{id}})">Devoure</button>
-
-            {{burger_name}}
-          </div>
-        </div>
       </div>
-
-      {{/unless}}
-      {{/each}}
-
+      <div class="col-6 border " id="colorfulName">
+        <h2>Burgers Enjoyed</h2>
 
 
+        {{#each burger}}
+        {{#if this.devoured}}<br>
 
-    </div>
-  </div>
-
-<div class="row">
-      <div class="col-6">
-  <div id="burgers-devoured">
-    <h2>Burgers Enjoyed</h2>
-    
-    {{#each burger}}
-    {{#if this.devoured}}
-    
-        <div class="burger">{{burger_name}} <span>#{{id}}</span></div>
+        {{burger_name}} <span>#{{id}}</span>
         {{/if}}
         {{/each}}
       </div>
+
     </div>
   </div>
+</div>
+</div>
 
-</section>
-</div> --}}
 
 <script>
 
